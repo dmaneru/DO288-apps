@@ -5,7 +5,8 @@ EXPOSE ${PORT}
 
 USER root
 RUN chmod -R g=u /var/cache && \
-    chgrp -R 0 /var/cache
+    chgrp -R 0 /var/cache && \
+    echo "hi"
 USER 1001
 ADD . $HOME
 
