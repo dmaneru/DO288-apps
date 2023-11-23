@@ -10,5 +10,5 @@ USER 1001
 ADD . $HOME
 
 RUN npm ci --omit=dev && rm -rf .npm
-
+RUN echo "hi"
 CMD npm start
