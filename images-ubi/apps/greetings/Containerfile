@@ -4,7 +4,8 @@ ENV PORT=8080
 EXPOSE ${PORT}
 
 USER root
-RUN chmod -R g=u /var/cache
+RUN chmod -R g=u /var/cache && \
+    chgrp -R 0 /var/cache
 USER 1001
 ADD . $HOME
 
